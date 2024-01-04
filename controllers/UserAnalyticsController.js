@@ -58,6 +58,12 @@ const UserAnalyticsController = {
             const db = client.db('obe-sample');
             const collection = db.collection('useranalytics');
 
+
+            const page = parseInt(req.query.page) || 1;
+            const limit = parseInt(req.query.limit) || 10;
+
+            const skip = (page - 1) * limit;
+
             const result = await collection.aggregate([{
                     $group: {
                         _id: {
@@ -84,6 +90,12 @@ const UserAnalyticsController = {
                             $first: '$totalActions'
                         }
                     }
+                },
+                {
+                    $skip: skip
+                },
+                {
+                    $limit: limit
                 }
             ]).toArray();
 
