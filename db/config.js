@@ -2,7 +2,8 @@ const {
     MongoClient
 } = require('mongodb');
 
-const mongoURI = 'mongodb+srv://abhishek:P8tSb0FUTs4dFeCp@cluster0.ktzxbdz.mongodb.net/obe-sample';
+require('dotenv').config();
+const mongoURI = process.env.URL;
 
 const client = new MongoClient(mongoURI, {
     useNewUrlParser: true,
