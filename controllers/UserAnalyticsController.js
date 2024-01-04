@@ -1,4 +1,3 @@
-// controllers/UserAnalyticsController.js
 const {
     client
 } = require('../db/config');

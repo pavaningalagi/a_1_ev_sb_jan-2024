@@ -1,4 +1,3 @@
-// controllers/EnergyUsageController.js
 const {
     client
 } = require('../db/config');

@@ -1,4 +1,3 @@
-// routes/EnergyUsageRoutes.js
 const express = require('express');
 const {
     EnergyUsageController
@@ -10,7 +9,6 @@ EnergyUsageRoutes.get('/totalEnergyByStationId', EnergyUsageController.getTotalE
 EnergyUsageRoutes.get('/totalMinutesByDate', EnergyUsageController.getTotalMinutesByDate);
 EnergyUsageRoutes.get('/mostBusyHour', EnergyUsageController.getMostBusyHour);
 EnergyUsageRoutes.get('/sumHourlyPortByHour', EnergyUsageController.sumHourlyPortByHour);
-// Add other routes for EnergyUsageController as needed
 
 module.exports = {
     EnergyUsageRoutes

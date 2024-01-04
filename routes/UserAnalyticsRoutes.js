@@ -1,4 +1,3 @@
-// routes/UserAnalyticsRoutes.js
 const express = require('express');
 const {
     UserAnalyticsController
